@@ -68,12 +68,12 @@ class BinarySearchTree {
       }
 
       if (data === node.data) {
-        // Node with no children
+        
         if (!node.left && !node.right) {
           return null;
         }
 
-        // Node with only one child
+        
         if (!node.left) {
           return node.right;
         }
@@ -81,7 +81,6 @@ class BinarySearchTree {
           return node.left;
         }
 
-        // Node with two children
         let minRight = node.right;
         while (minRight.left) {
           minRight = minRight.left;
@@ -115,7 +114,7 @@ class BinarySearchTree {
     return current.data;
   }
 
-  max() {
+  max() { 
     if (!this.rootNode) {
       return null;
     }
